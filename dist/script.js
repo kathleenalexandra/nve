@@ -63,13 +63,13 @@ function init() {
     manager.addHandler(/\.dds$/i, new DDSLoader());
 
     new MTLLoader(manager)
-        .setPath("./examples/models/obj/male02/")
+        .setPath("./examples/models/obj/beach/")
         .load("Beach_-_Low_Poly.mtl", function(materials) {
             materials.preload();
 
             new OBJLoader(manager)
                 .setMaterials(materials)
-                .setPath("./examples/models/obj/male02/")
+                .setPath("./examples/models/obj/beach/")
                 .load(
                     "Beach - Low Poly.obj",
                     function(object) {
